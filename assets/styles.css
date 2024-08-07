@@ -136,7 +136,6 @@ section {
 .social-icon i {
   font-size: 24px;
   margin-right: 10px;
-  color: var(--text-color);
 }
 
 .social-icon:hover {
@@ -236,19 +235,34 @@ section {
 
 .resume-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); 
   grid-gap: 3rem;
-  align-items: center;
+  align-items: stretch; 
   margin-top: 2.2rem;
   margin-bottom: 2.2rem;
 }
 
 .box {
+  position: relative; 
   background: var(--box-color);
   padding: 40px 30px;
   border-radius: 5px;
   cursor: pointer;
   transition: all .40s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  height: 100%; 
+  min-height: 300px;
+}
+
+.corner-image {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px; 
+  height: 40px; 
+  border-radius: 50%; 
 }
 
 .box h6 {
@@ -417,7 +431,7 @@ form .send-btn:hover {
 /*<---------Mobile--------->*/
 /* Hamburger Menu Icon */
 #menu-icon {
-  font-size: 28px;
+  font-size: 50px;
   z-index: 10001;
   cursor: pointer;
   display: none;
@@ -432,7 +446,7 @@ form .send-btn:hover {
       display: block;
   }
   .navbar {
-      background: #0b0b13;
+      background: #130b0b;
       position: absolute;
       top: -500px;
       right: 0;
