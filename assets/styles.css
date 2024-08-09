@@ -301,10 +301,6 @@ section {
 }
 
 /* Projects Section */
-.center {
-  text-align: center;
-}
-
 .center h3 {
   color: var(--text-color);
   font-size: 30px;
@@ -314,43 +310,65 @@ section {
 
 .project-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Ensure equal sizing */
   grid-gap: 2rem;
-  align-items: center;
+  align-items: stretch; /* Stretch rows to have equal height */
   margin-top: 4.4rem;
 }
 
 .row {
   background: var(--box-color);
-  padding: 60px 35px;
+  padding: 0; /* Remove padding to avoid affecting image layout */
   border-radius: 5px;
   cursor: pointer;
-  transition: all .40s;
+  transition: all 0.4s;
+  overflow: hidden; /* Ensure content fits within the border-radius */
+  display: flex;
+  flex-direction: column;
+  height: 450px; /* Set a fixed height to ensure consistency */
+  box-shadow: 0px 15px 30px 0px rgb(0 0 0 / 30%); /* Add a subtle box shadow */
 }
 
-.row i{
+.row img {
+  width: 100%;
+  height: 200px; /* Set a fixed height for images */
+  object-fit: cover;
+  border-bottom: 2px solid var(--main-color); /* Add a border below the image */
+}
+
+.row-content {
+  padding: 20px 25px; /* Add padding for text */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1; /* Ensure content takes the remaining space */
+}
+
+.row-content i {
   color: var(--main-color);
   font-size: 3rem;
   margin-bottom: 20px;
 }
 
-.row h3 {
+.row-content h3 {
   font-size: 1.25rem;
   font-weight: 500;
-  margin-bottom: 20px;
+  margin-bottom: 10px; /* Reduce margin to fit content better */
   color: var(--text-color);
 }
 
-.row p {
-  font-size: 18px;
+.row-content p {
+  font-size: 16px;
   color: var(--2nd-main-color);
-  line-height: 30px;
+  line-height: 24px;
+  margin-bottom: 15px; /* Reduce margin to fit content better */
 }
 
 .row:hover {
-  transform: translateY(-15px);
+  transform: translateY(-10px); /* Reduce hover effect for more subtle animation */
   box-shadow: 0px 15px 30px 0px rgb(0 0 0 / 70%);
 }
+
 
 /* Contact Section */
 .contact {
