@@ -310,38 +310,38 @@ section {
 
 .project-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Ensure equal sizing */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-gap: 2rem;
-  align-items: stretch; /* Stretch rows to have equal height */
+  align-items: stretch;
   margin-top: 4.4rem;
 }
 
 .row {
   background: var(--box-color);
-  padding: 0; /* Remove padding to avoid affecting image layout */
+  padding: 0; 
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.4s;
-  overflow: hidden; /* Ensure content fits within the border-radius */
+  overflow: hidden; 
   display: flex;
   flex-direction: column;
-  height: 450px; /* Set a fixed height to ensure consistency */
-  box-shadow: 0px 15px 30px 0px rgb(0 0 0 / 30%); /* Add a subtle box shadow */
+  height: 450px; 
+  box-shadow: 0px 15px 30px 0px rgb(0 0 0 / 30%);
 }
 
 .row img {
   width: 100%;
-  height: 200px; /* Set a fixed height for images */
+  height: 200px; 
   object-fit: cover;
-  border-bottom: 2px solid var(--main-color); /* Add a border below the image */
+  border-bottom: 2px solid var(--main-color);
 }
 
 .row-content {
-  padding: 20px 25px; /* Add padding for text */
+  padding: 20px 25px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex-grow: 1; /* Ensure content takes the remaining space */
+  flex-grow: 1;
 }
 
 .row-content i {
@@ -353,7 +353,7 @@ section {
 .row-content h3 {
   font-size: 1.25rem;
   font-weight: 500;
-  margin-bottom: 10px; /* Reduce margin to fit content better */
+  margin-bottom: 10px; 
   color: var(--text-color);
 }
 
@@ -361,14 +361,30 @@ section {
   font-size: 16px;
   color: var(--2nd-main-color);
   line-height: 24px;
-  margin-bottom: 15px; /* Reduce margin to fit content better */
+  margin-bottom: 15px;
 }
 
 .row:hover {
-  transform: translateY(-10px); /* Reduce hover effect for more subtle animation */
+  transform: translateY(-10px);
   box-shadow: 0px 15px 30px 0px rgb(0 0 0 / 70%);
 }
 
+.text-collapse {
+  height: 60px;
+  overflow: hidden;
+  position: relative;
+}
+
+.text-collapse.expanded {
+  height: auto;
+}
+
+.read-more {
+  color: var(--main-color);
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+}
 
 /* Contact Section */
 .contact {
