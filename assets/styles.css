@@ -37,7 +37,7 @@ header {
   justify-content: space-between;
   background: var(--bg--color);
   padding: 24px 14%;
-  transition: .3s;
+  transition: .1s;
 }
 
 /* Navbar */
@@ -99,7 +99,7 @@ section {
 .home-text h5 {
   color: var(--text-color);
   font-size: 25px;
-  font-weight: 500;
+  font-weight: 600;
   margin: 0 0 20px;
 }
 
@@ -122,19 +122,19 @@ section {
 .social-icons {
   margin-top: 20px;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  flex-direction: row;
+  gap: 20px;
 }
 
 .social-icon {
   display: flex;
   align-items: center;
   color: var(--text-color);
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 .social-icon i {
-  font-size: 24px;
+  font-size: 48px;
   margin-right: 10px;
 }
 
@@ -155,7 +155,7 @@ section {
   font-weight: 400;
   letter-spacing: 2px;
   transition: ease all 0.35s;
-  margin: 20px 0px 0px;
+  margin: 0px 0px 0px;
 }
 
 .btn:hover {
@@ -325,7 +325,7 @@ section {
   overflow: hidden; 
   display: flex;
   flex-direction: column;
-  height: auto; /* Set height to auto for dynamic resizing */
+  height: auto;
   box-shadow: 0px 15px 30px 0px rgb(0 0 0 / 30%);
 }
 
@@ -339,6 +339,10 @@ section {
   height: 200px; 
   object-fit: cover;
   border-bottom: 2px solid var(--main-color);
+}
+
+.row:hover img {
+  filter: brightness(1.2) saturate(2) hue-rotate(-20deg);
 }
 
 .row-content {
@@ -355,6 +359,11 @@ section {
   font-weight: 500;
   margin-bottom: 10px;
   color: var(--text-color);
+  cursor: pointer; 
+}
+
+.row-content h3:hover {
+  color: var(--main-color);
 }
 
 .row-content p {
