@@ -11,11 +11,11 @@ window.onscroll = () => {
   navbar.classList.remove('active');
 };
 
-const sr = ScrollReveal({
-  distance: '60px',
-  duration: 0,
-  reset: true,
-});
+//const sr = ScrollReveal({
+//  distance: '60px',
+//  duration: 0,
+//  reset: true,
+//});
 
 document.addEventListener("DOMContentLoaded", function() {
   document.querySelectorAll('.read-more-btn').forEach(function(button) {
