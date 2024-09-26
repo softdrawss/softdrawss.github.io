@@ -578,6 +578,10 @@ form .send-btn:hover {
   .box h5 {
       font-size: 12px;
   }
+  .row h3{
+    text-decoration: underline var(--main-color);
+  }
+  
   .contact-form form {
       width: 100%;
   }
