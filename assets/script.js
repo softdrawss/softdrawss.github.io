@@ -23,17 +23,15 @@ document.addEventListener("DOMContentLoaded", function() {
       const row = button.closest('.row');
       const content = row.querySelectorAll('.row-content p');
       
-      // Toggle expanded class for each paragraph
       content.forEach(paragraph => paragraph.classList.toggle('expanded'));
       
-      // Toggle button text
       const allExpanded = Array.from(content).every(p => p.classList.contains('expanded'));
       button.textContent = allExpanded ? 'Read Less' : 'Read More';
       
       if (allExpanded) {
-        row.style.height = 'auto'; // Adjust height to fit content
+        row.style.height = 'auto';
       } else {
-        row.style.height = ''; // Reset height to default
+        row.style.height = '';
       }
     });
   });
