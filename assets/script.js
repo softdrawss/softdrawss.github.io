@@ -37,6 +37,40 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-sr.reveal('.home-text', { delay: 200, origin: 'top' });
-sr.reveal('.home-img', { delay: 400, origin: 'top' });
-sr.reveal('.about, .cta, .resume, .contact, .footer', { delay: 200, origin: 'top' });
+document.addEventListener("DOMContentLoaded", () => {
+  const projects = document.querySelectorAll(".project-content .row");
+  const btn = document.getElementById("show-more-projects");
+
+  const INITIAL_VISIBLE = 8; // show 8 projects initially
+  const STEP = 4;            // reveal 4
+  let visibleCount = INITIAL_VISIBLE;
+
+  function updateView() {
+    projects.forEach((project, index) => {
+      project.classList.toggle("visible", index < visibleCount);
+    });
+
+    if (visibleCount >= projects.length) {
+      btn.textContent = "Show less";
+    } else {
+      btn.textContent = "Show more";
+    }
+  }
+
+  // Initial state
+  updateView();
+
+  btn.addEventListener("click", () => {
+    if (visibleCount >= projects.length) {
+      visibleCount = INITIAL_VISIBLE;
+
+      document.getElementById("projects").scrollIntoView({
+        behavior: "smooth"
+      });
+    } else {
+      visibleCount = Math.min(visibleCount + STEP, projects.length);
+    }
+
+    updateView();
+  });
+});
