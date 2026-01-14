@@ -30,15 +30,16 @@ body {
 header {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
-  right: 0;
+  background: var(--bg--color);
   z-index: 1000;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: var(--bg--color);
-  padding: 24px 14%;
-  /*transition: .1s;*/
+
+  padding: 20px 6%;
 }
 
 /* Navbar */
@@ -54,6 +55,7 @@ span {
 
 .navbar {
   display: flex;
+  gap: 10px;
 }
 
 .navbar a {
@@ -374,26 +376,29 @@ section {
 }
 
 .row-content p {
-  font-size: 16px;
+    font-size: 16px;
   color: var(--2nd-main-color);
   line-height: 24px;
-  margin-bottom: 15px;
+
   overflow: hidden;
-  text-overflow: ellipsis;
- /* transition: max-height 0.3s ease, margin-bottom 0.3s ease;*/
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  max-height: 120px; 
-  -webkit-line-clamp: 5; 
-  line-clamp: 5;
+  max-height: 0;
+  opacity: 0;
+
+  padding-top: 0;
+  padding-bottom: 0;
+
+  transition:
+    max-height 0.45s ease,
+    opacity 0.3s ease,
+    padding 0.3s ease;
 }
 
 .row-content p.expanded {
-  -webkit-line-clamp: unset;
-  line-clamp: unset;
-  max-height: none;
-  height: auto;
-  margin-bottom: 30px; 
+   max-height: 1000px;
+  opacity: 1;
+
+  padding-top: 5px;
+  padding-bottom: 10px;
 }
 
 .read-more-btn {
