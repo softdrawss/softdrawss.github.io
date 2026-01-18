@@ -41,8 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const projects = document.querySelectorAll(".project-content .row");
   const btn = document.getElementById("show-more-projects");
 
-  const INITIAL_VISIBLE = 8; // show 8 projects initially
-  const STEP = 4;            // reveal 4
+  const INITIAL_VISIBLE = 6;
+  const STEP = 3;
   let visibleCount = INITIAL_VISIBLE;
 
   function updateView() {
