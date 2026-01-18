@@ -434,7 +434,7 @@ section {
 .box {
   position: relative;
   background: var(--box-color);
-  padding: 40px 30px;
+  padding: 70px 40px 30px;
   border-radius: 5px;
   /*cursor: pointer;*/
   /*transition: all .40s;*/
@@ -484,13 +484,13 @@ section {
   margin-bottom: 10px;
 }
 
-.resume .box a {
+.box a {
   color: var(--main-color);
   text-decoration: none;
   border-bottom: 1px dashed var(--main-color);
 }
 
-.resume .box a:hover {
+.box a:hover {
   color: var(--text-color);
   border-bottom-color: var(--text-color);
 }
