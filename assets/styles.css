@@ -230,7 +230,7 @@ section {
   grid-gap: 2rem;
   align-items: stretch;
   justify-content: center;
-  margin-top: 4.4rem;
+  margin-top: 2rem;
 }
 
 .project-content .row {
@@ -420,6 +420,10 @@ section {
 .resume .center {
   display: flex;
   justify-content: center;
+}
+
+.resume .center h4 {
+  margin-top: 3rem;
 }
 
 .resume-content {
@@ -698,10 +702,14 @@ form .send-btn:hover {
   .about-text p {
     font-size: 0.9rem;
   }
+  .resume .center h4 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.0rem;
+  }
   .resume-content {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 2rem;
-    margin-top: 4.4rem;
+    margin-top: 2.2rem;
   }
   .project-content {
     grid-template-columns: 1fr; /* 1 project per row */
