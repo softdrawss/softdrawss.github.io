@@ -656,6 +656,10 @@ form .send-btn:hover {
   .navbar.active {
     top: 100%;
   }
+  section {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
   .home {
     grid-template-columns: 1fr;
     grid-gap: 2rem;
