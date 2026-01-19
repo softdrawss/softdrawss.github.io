@@ -620,6 +620,13 @@ form .send-btn:hover {
   display: none;
 }
 
+/* Navbar for tablet */
+@media (max-width: 1024px) {
+  .project-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* Navbar for mobile */
 @media (max-width: 768px) {
   header {
@@ -692,14 +699,16 @@ form .send-btn:hover {
     grid-gap: 2rem;
     margin-top: 4.4rem;
   }
-
+  .project-content {
+    grid-template-columns: 1fr; /* 1 project per row */
+    gap: 1.5rem;
+  }
   .education-content {
     grid-template-columns: 1fr;
     grid-gap: 1.5rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
-
   .box h4 {
     font-size: 1rem;
   }
